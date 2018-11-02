@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hufei1993/webpack-fullseries-tool.git"
+    "url": "https://github.com/hufei1993/react-h5.git"
   },
   "keywords": [
     "webpack",
@@ -23,9 +23,9 @@
   "author": "hufei1993",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hufei1993/webpack-fullseries-tool/issues"
+    "url": "https://github.com/hufei1993/react-h5/issues"
   },
-  "homepage": "https://github.com/hufei1993/webpack-fullseries-tool#readme",
+  "homepage": "https://github.com/hufei1993/react-h5#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
