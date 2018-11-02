@@ -1,0 +1,79 @@
+.HomeComponent{
+  width: 100%;
+  height: 100%;
+  .swiper-container{
+    width: 100%;
+    height: 100%;
+    .swiper-wrapper{
+      width: 100%;
+      height: 100%;
+      .swiper-slide{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .up-arrow {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    z-index: 999;
+    background: none;
+    border: none;
+    padding: 0;
+    animation: upArrowAni 2s infinite linear;
+    embed {
+      width: 2rem;
+      height: 2rem;
+      text-align: center;
+      line-height: 2rem;
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+  .slide-1{
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+  }
+  .slide-2{
+    background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+  }
+  .slide-3{
+    background: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+  }
+}
+@keyframes upArrowAni {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, 30%, 0);
+  }
+  
+  30% {
+    opacity: 1;
+    transform: translate3d(-50%, -20%, 0);
+  }
+  
+  60% {
+    opacity: 0;
+    transform: translate3d(-50%, -35%, 0);
+  }
+  
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
