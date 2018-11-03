@@ -57,24 +57,7 @@ let config = {
         exclude: /node_modules/,
         use: ['babel-loader']
       },
-      {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
-      },
-      {
-        test: /\.less$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'less-loader'
-          }
-        ]
-      },
+
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -135,19 +118,39 @@ if (process.env.NODE_ENV === 'development') {
   config.plugins = config.plugins.concat(
     new webpack.HotModuleReplacementPlugin()
   );
-  config.module.rules = config.module.rules.concat({
-    test: /\.css$/,
-    use: [
-      'style-loader',
-      {
-        loader: 'css-loader',
-        options: {
-          modules: false
+  config.module.rules = config.module.rules.concat(
+    {
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            modules: false
+          }
+        },
+        'postcss-loader'
+      ]
+    },
+    {
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
+    },
+    {
+      test: /\.less$/,
+      use: [
+        {
+          loader: 'style-loader'
+        },
+        {
+          loader: 'css-loader'
+        },
+        {
+          loader: 'less-loader'
         }
-      },
-      'postcss-loader'
-    ]
-  });
+      ]
+    }
+  );
 } else {
   config.entry = {
     index: ['./src/index']
